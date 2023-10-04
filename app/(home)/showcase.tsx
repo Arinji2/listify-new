@@ -2,20 +2,20 @@ import WidthWrapper from "../(wrapper)/widthWrapper";
 
 export default function Showcase() {
   return (
-    <section className="w-full h-fit bg-palette-primary py-10  flex flex-col items-center justify-center pb-5">
+    <section className="flex h-fit w-full flex-col  items-center justify-center bg-palette-primary py-10 ">
       <WidthWrapper>
-        <div className="w-full h-full flex flex-col items-center xl:items-start justify-center gap-10">
-          <div className="w-fit h-fit flex md:flex-row items-center justify-start flex-col gap-5 ">
-            <div className="w-[100px] h-[100px] bg-palette-background rounded-full flex flex-col items-center justify-center">
-              <p className="text-[60px] font-bold shrink text-palette-primary">
+        <div className="flex h-full w-full flex-col items-center justify-center gap-10 md:items-start">
+          <div className="flex h-fit w-fit flex-col items-center justify-start gap-5 md:flex-row ">
+            <div className="flex h-[100px] w-[100px] flex-col items-center justify-center rounded-full bg-palette-offWhite">
+              <p className="shrink text-[60px] font-bold text-palette-primary">
                 1
               </p>
             </div>
-            <h2 className="text-palette-background font-bold text-[50px]">
+            <h2 className="text-[50px] font-bold text-palette-background">
               Showcase
             </h2>
           </div>
-          <div className="xl:w-fit w-full h-full grid xl:grid-cols-2 grid-cols-1 xl:pl-16 gap-5">
+          <div className="grid h-full w-full grid-cols-1 gap-5 xl:w-fit xl:grid-cols-2 xl:pl-16">
             <Card
               title="Themes"
               description="Showcase your playlists in multiple themes."
@@ -43,10 +43,12 @@ function Card({ title, description }: { title: string; description: string }) {
   return (
     <div
       tabIndex={0}
-      className="md:w-[516px] m-auto  hover:scale-90 transition-all ease-in-out duration-300 hover:shadow-buttonHover will-change-transform w-full h-[200px] border-[3px] border-black bg-palette-background  flex flex-col items-start p-5 justify-start shadow-button"
+      className="m-auto flex h-[150px] w-full  flex-col items-start justify-start border-[3px] border-black bg-palette-background p-5 shadow-button transition-all duration-300 ease-in-out  will-change-transform hover:scale-90 hover:shadow-buttonHover md:mr-auto md:h-[200px] md:w-[516px]"
     >
-      <h3 className="text-[50px] font-bold text-palette-text">{title}</h3>
-      <p className=" text-[20px] text-palette-text font-medium">
+      <h3 className="text-[30px] font-bold text-palette-text md:text-[50px]">
+        {title}
+      </h3>
+      <p className="text-[15px] font-medium text-palette-text md:text-[20px]">
         {description}
       </p>
     </div>

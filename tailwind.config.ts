@@ -32,6 +32,7 @@ const config: Config = {
           success: "#3BBD58",
           error: "#BD3B3B",
           info: "#252625",
+          offWhite: "#D9D9D9",
         },
       },
     },

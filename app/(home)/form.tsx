@@ -22,16 +22,16 @@ export function Form() {
         router.prefetch("/register");
         router.push("/register");
       }}
-      className="w-full h-fit flex flex-col md:flex-row items-center justify-start gap-5"
+      className="flex h-fit w-full flex-col items-center justify-start gap-5 md:flex-row"
     >
       <input
         type="url"
         placeholder="Spotify Playlist Link"
-        className="h-[58px] md:h-[85px] xl:w-[600px] xl:h-[100px] py-5 px-[17px] border-palette-text border-[3px] text-palette-text text-opacity-60 text-[20px] font-medium"
+        className="h-[58px] border-[3px] border-palette-text px-[17px] py-5 text-[20px] font-medium text-palette-text text-opacity-60 md:h-[85px] xl:h-[100px] xl:w-[600px]"
       />
       <button
         type="submit"
-        className="w-fit h-fit p-2 md:p-5 border-[3px] border-palette-text shadow-button bg-palette-tertiary hover:scale-95 hover:shadow-buttonHover transition-all ease-out duration-300 will-change-transform text-palette-text text-[20px] xl:text-[40px] md:text-[30px] font-medium"
+        className="h-fit w-fit border-[3px] border-palette-text bg-palette-tertiary p-2 text-[20px] font-medium text-palette-text shadow-button transition-all duration-300 ease-out will-change-transform hover:scale-95 hover:shadow-buttonHover md:p-5 md:text-[30px] xl:text-[40px]"
       >
         Start Playing
       </button>

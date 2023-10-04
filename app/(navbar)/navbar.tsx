@@ -11,10 +11,10 @@ export default function Navbar() {
   let safePath = path as "faq" | "about" | "support";
   const [active, setActive] = useState(false);
   return (
-    <nav className="sticky z-[60] top-0 w-full h-[80px] md:h-[130px] bg-palette-background flex flex-col items-center justify-center">
+    <nav className="sticky top-0 z-[60] flex h-[80px] w-full flex-col items-center justify-center bg-palette-background md:h-[130px]">
       <WidthWrapper>
-        <div className="w-full h-full flex flex-row items-center justify-between">
-          <div className="xl:w-[200px] xl:h-[51px] w-[100px] h-[25.5px] relative">
+        <div className="flex h-full w-full flex-row items-center justify-between">
+          <div className="relative h-[25.5px] w-[100px] xl:h-[51px] xl:w-[200px]">
             <Image
               src="/logo.png"
               alt="Logo"
@@ -23,75 +23,75 @@ export default function Navbar() {
               className="object-contain"
             />
           </div>
-          <ul className="hidden md:flex flex-row items-center  justify-center w-fit h-fit gap-8">
+          <ul className="hidden h-fit w-fit flex-row  items-center justify-center gap-8 md:flex">
             <Link
               href="/faq"
-              className="w-fit h-fit flex flex-col items-start justify-center group gap-1"
+              className="group flex h-fit w-fit flex-col items-start justify-center gap-1"
             >
-              <p className="text-palette-text text-xl xl:text-3xl font-medium">
+              <p className="text-xl font-medium text-palette-text xl:text-3xl">
                 FAQ
               </p>
               <div
                 className={`${
-                  safePath === "faq" ? "w-full " : "group-hover:w-full w-0 "
-                } h-[3px] bg-black  transition-all ease-in-out duration-500 origin-left`}
+                  safePath === "faq" ? "w-full " : "w-0 group-hover:w-full "
+                } h-[3px] origin-left  bg-black transition-all duration-500 ease-in-out`}
               ></div>
             </Link>
             <Link
               href="/about"
-              className="w-fit h-fit flex flex-col items-start justify-center group gap-1"
+              className="group flex h-fit w-fit flex-col items-start justify-center gap-1"
             >
-              <p className="text-palette-text text-xl xl:text-3xl font-medium">
+              <p className="text-xl font-medium text-palette-text xl:text-3xl">
                 About
               </p>
               <div
                 className={`${
-                  safePath === "about" ? "w-full " : "group-hover:w-full w-0 "
-                } h-[3px] bg-black  transition-all ease-in-out duration-500 origin-left`}
+                  safePath === "about" ? "w-full " : "w-0 group-hover:w-full "
+                } h-[3px] origin-left  bg-black transition-all duration-500 ease-in-out`}
               ></div>
             </Link>
             <Link
               href="/support"
-              className="w-fit h-fit flex flex-col items-start justify-center group gap-1"
+              className="group flex h-fit w-fit flex-col items-start justify-center gap-1"
             >
-              <p className="text-palette-text text-xl xl:text-3xl font-medium">
+              <p className="text-xl font-medium text-palette-text xl:text-3xl">
                 Support
               </p>
               <div
                 className={`${
-                  safePath === "support" ? "w-full " : "group-hover:w-full w-0 "
-                } h-[3px] bg-black  transition-all ease-in-out duration-500 origin-left`}
+                  safePath === "support" ? "w-full " : "w-0 group-hover:w-full "
+                } h-[3px] origin-left  bg-black transition-all duration-500 ease-in-out`}
               ></div>
             </Link>
           </ul>
           <Link
             href="/register"
-            className="md:block hidden w-fit h-fit border-[3px] border-black bg-palette-tertiary p-[10px]"
+            className="hidden h-fit w-fit border-[3px] border-black bg-palette-tertiary p-[10px] md:block"
           >
-            <p className="text-palette-text text-xl xl:text-3xl font-medium">
+            <p className="text-xl font-medium text-palette-text xl:text-3xl">
               Start Playing
             </p>
           </Link>
           <div
-            className="md:hidden relative flex w-[50px] h-[50px] z-50 flex-col items-center justify-center gap-1"
+            className="relative z-50 flex h-[50px] w-[50px] flex-col items-center justify-center gap-1 md:hidden"
             onClick={() => {
               setActive(!active);
             }}
           >
             <div
               className={`${
-                active ? "-rotate-45 top-4 " : "rotate-0 top-2 "
-              }bg-black w-[37px] h-[4px] absolute right-0 ease-in-out transition-all duration-500`}
+                active ? "top-4 -rotate-45 " : "top-2 rotate-0 "
+              }bg-black absolute right-0 h-[4px] w-[37px] transition-all duration-500 ease-in-out`}
             ></div>
             <div
               className={`${
                 active ? "opacity-0 " : "opacity-100 "
-              } bg-black w-[37px] h-[4px] absolute right-0 top-4 ease-in-out transition-all duration-500`}
+              } absolute right-0 top-4 h-[4px] w-[37px] bg-black transition-all duration-500 ease-in-out`}
             ></div>
             <div
               className={`${
-                active ? "rotate-45 top-4 " : "rotate-0 top-6 "
-              }bg-black w-[37px] h-[4px] absolute right-0 ease-in-out transition-all duration-500`}
+                active ? "top-4 rotate-45 " : "top-6 rotate-0 "
+              }bg-black absolute right-0 h-[4px] w-[37px] transition-all duration-500 ease-in-out`}
             ></div>
           </div>
         </div>
@@ -99,42 +99,42 @@ export default function Navbar() {
       <div
         className={`${
           active ? "translate-x-0 " : "translate-x-full "
-        }md:hidden fixed top-0 right-0 flex-col items-center justify-center  flex w-[70%] h-screen bg-palette-accent ease-in-out transition-all duration-500`}
+        }md:hidden fixed right-0 top-0 flex h-screen w-[70%]  flex-col items-center justify-center bg-palette-accent transition-all duration-500 ease-in-out`}
       >
-        <ul className="md:hidden flex flex-col items-center  justify-center w-fit h-fit gap-8">
+        <ul className="flex h-fit w-fit flex-col  items-center justify-center gap-8 md:hidden">
           <Link
             href="/faq"
-            className="w-fit h-fit flex flex-col items-start justify-center group gap-1"
+            className="group flex h-fit w-fit flex-col items-start justify-center gap-1"
           >
-            <p className="text-palette-background text-2xl  font-bold">FAQ</p>
+            <p className="text-2xl font-bold  text-palette-background">FAQ</p>
             <div
               className={`${
-                safePath === "faq" ? "w-full " : "group-hover:w-full w-0 "
-              } h-[3px] bg-white  transition-all ease-in-out duration-500 origin-left`}
+                safePath === "faq" ? "w-full " : "w-0 group-hover:w-full "
+              } h-[3px] origin-left  bg-white transition-all duration-500 ease-in-out`}
             ></div>
           </Link>
           <Link
             href="/about"
-            className="w-fit h-fit flex flex-col items-start justify-center group gap-1"
+            className="group flex h-fit w-fit flex-col items-start justify-center gap-1"
           >
-            <p className="text-palette-background text-2xl  font-bold">About</p>
+            <p className="text-2xl font-bold  text-palette-background">About</p>
             <div
               className={`${
-                safePath === "about" ? "w-full " : "group-hover:w-full w-0 "
-              } h-[3px] bg-white  transition-all ease-in-out duration-500 origin-left`}
+                safePath === "about" ? "w-full " : "w-0 group-hover:w-full "
+              } h-[3px] origin-left  bg-white transition-all duration-500 ease-in-out`}
             ></div>
           </Link>
           <Link
             href="/support"
-            className="w-fit h-fit flex flex-col items-start justify-center group gap-1"
+            className="group flex h-fit w-fit flex-col items-start justify-center gap-1"
           >
-            <p className="text-palette-background text-2xl  font-bold">
+            <p className="text-2xl font-bold  text-palette-background">
               Support
             </p>
             <div
               className={`${
-                safePath === "support" ? "w-full " : "group-hover:w-full w-0 "
-              } h-[3px] bg-white  transition-all ease-in-out duration-500 origin-left`}
+                safePath === "support" ? "w-full " : "w-0 group-hover:w-full "
+              } h-[3px] origin-left  bg-white transition-all duration-500 ease-in-out`}
             ></div>
           </Link>
         </ul>
