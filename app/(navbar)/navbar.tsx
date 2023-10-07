@@ -14,7 +14,10 @@ export default function Navbar() {
     <nav className="sticky top-0 z-[60] flex h-[80px] w-full flex-col items-center justify-center bg-palette-background md:h-[130px]">
       <WidthWrapper>
         <div className="flex h-full w-full flex-row items-center justify-between">
-          <div className="relative h-[25.5px] w-[100px] xl:h-[51px] xl:w-[200px]">
+          <Link
+            href="/"
+            className="relative h-[25.5px] w-[100px] xl:h-[51px] xl:w-[200px]"
+          >
             <Image
               src="/logo.png"
               alt="Logo"
@@ -22,7 +25,7 @@ export default function Navbar() {
               sizes=" (min-width: 1280px) 200px, 100px"
               className="object-contain"
             />
-          </div>
+          </Link>
           <ul className="hidden h-fit w-fit flex-row  items-center justify-center gap-8 md:flex">
             <Link
               href="/faq"

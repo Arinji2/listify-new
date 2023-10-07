@@ -1,6 +1,7 @@
 import WidthWrapper from "../(wrapper)/widthWrapper";
 import Compare from "./compare";
 import Convert from "./convert";
+import { Footer } from "./footer";
 
 import { Hero } from "./hero";
 import Showcase from "./showcase";
@@ -14,6 +15,7 @@ export default function Home() {
       <Showcase />
       <Compare />
       <Convert />
+      <Footer />
     </section>
   );
 }

@@ -4,7 +4,7 @@ import { REGEX } from "@/utils/regex";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
-export function Form() {
+export function Form({ center }: { center?: boolean }) {
   const router = useRouter();
 
   return (
@@ -22,7 +22,9 @@ export function Form() {
         router.prefetch("/register");
         router.push("/register");
       }}
-      className="flex h-fit w-full flex-col items-center justify-start gap-5 md:flex-row"
+      className={`${
+        center ? "justify-center " : "justify-start "
+      }flex h-fit w-full flex-col items-center  gap-5 md:flex-row`}
     >
       <input
         type="url"
