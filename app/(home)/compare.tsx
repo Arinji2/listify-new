@@ -16,7 +16,7 @@ export default function Compare() {
             </h2>
           </div>
           <div className="flex h-full w-full flex-col items-start justify-center  xl:pl-16">
-            <div className="flex h-fit w-full flex-col items-center justify-start  gap-5 border-[3px] border-black bg-palette-background p-5 shadow-button  transition-all duration-300 ease-in-out  will-change-transform hover:scale-90 hover:shadow-buttonHover md:h-[400px] xl:m-0 xl:max-w-[1060px]">
+            <div className="flex h-fit w-full flex-col items-center justify-start  gap-5 border-[3px] border-black bg-palette-background p-5 shadow-button  transition-all duration-300 ease-in-out  will-change-transform hover:scale-90 hover:shadow-buttonHover  xl:m-0 xl:max-w-[1060px]">
               <h3 className="text-center text-[40px] font-bold text-palette-text md:text-[50px]">
                 Compare between Playlists
               </h3>
