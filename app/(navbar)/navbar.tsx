@@ -5,13 +5,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ border }: { border?: boolean }) {
   let path = usePathname();
   path = path.split("/")[1];
   let safePath = path as "faq" | "about" | "support";
   const [active, setActive] = useState(false);
   return (
-    <nav className="sticky top-0 z-[60] flex h-[80px] w-full flex-col items-center justify-center bg-palette-background md:h-[130px]">
+    <nav
+      className={`${
+        border && "border-b-4 border-black "
+      }sticky top-0 z-[60] flex h-[80px] w-full flex-col items-center justify-center bg-palette-background md:h-[130px]`}
+    >
       <WidthWrapper>
         <div className="flex h-full w-full flex-row items-center justify-between">
           <Link

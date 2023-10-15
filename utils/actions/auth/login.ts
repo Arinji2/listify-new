@@ -1,7 +1,7 @@
 "use server";
 
-import { ILoginUser } from "../types";
-import { pb } from "../pocketbase";
+import { ILoginUser } from "../../types";
+import { pb } from "../../pocketbase";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
