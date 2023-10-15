@@ -3,7 +3,7 @@ import { Form } from "./form";
 
 export function Hero() {
   return (
-    <div className="flex min-h-excludeMobNav w-full flex-col items-start justify-center gap-10 md:min-h-excludeNav">
+    <div className="flex h-fit w-full flex-col items-start justify-center gap-10 md:min-h-excludeNav">
       <section className="relative flex h-fit w-[90%] flex-col items-start justify-center text-left xl:w-[70%]">
         <h1 className="text-[30px] font-bold text-palette-text md:text-[60px] xl:text-[80px]">
           Giving Love to your Spotify Playlists

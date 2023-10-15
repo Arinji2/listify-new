@@ -19,7 +19,7 @@ export default function Convert() {
           <div className="flex h-full w-full flex-col items-start justify-center  xl:pl-16">
             <div className="flex h-fit w-full shrink-0 flex-col items-center justify-start gap-5  border-[3px] border-black bg-palette-background p-5 shadow-button transition-all  duration-300 ease-in-out will-change-transform  hover:scale-90 hover:shadow-buttonHover md:shrink xl:m-0 xl:h-[300px] xl:max-w-[1060px]">
               <div className="flex h-fit w-full flex-col items-center justify-center gap-5 md:h-fit md:gap-3 xl:flex-row">
-                <p className="text-[50px] font-medium text-black">
+                <p className="text-center text-[40px] font-medium text-black md:text-[50px]">
                   Main Playlist
                 </p>
                 <div className="relative flex h-[200px] w-fit shrink-0 flex-row items-center justify-center gap-y-5 xl:h-full xl:flex-col">
@@ -28,7 +28,7 @@ export default function Convert() {
                     width={185}
                     height={3}
                     alt="Arrow"
-                    className="rotate-[100deg] object-contain md:absolute  md:right-20 md:rotate-[123deg] xl:static  xl:mr-3 xl:-rotate-[19deg] "
+                    className="ml-7 rotate-[100deg] object-contain md:absolute md:right-20  md:ml-0 md:rotate-[123deg] xl:static  xl:mr-3 xl:-rotate-[19deg] "
                   />
 
                   <Image
@@ -43,13 +43,17 @@ export default function Convert() {
                     width={185}
                     height={3}
                     alt="Arrow"
-                    className=" rotate-[77deg] object-contain md:absolute  md:left-20 md:rotate-[57deg] xl:static xl:mr-3 xl:rotate-[19deg] "
+                    className=" mr-7 rotate-[77deg] object-contain md:absolute md:left-20 md:mr-0 md:rotate-[57deg] xl:static xl:mr-3 xl:rotate-[19deg] "
                   />
                 </div>
-                <div className="flex h-full w-fit flex-row items-start justify-center gap-8  md:items-center xl:flex-col">
-                  <p className="text-[30px] text-black">Playlist 1</p>
-                  <p className=" text-[30px] text-black">Playlist 2</p>
-                  <p className="hidden text-[30px] text-black md:block">
+                <div className="flex h-full w-full flex-row items-start justify-between gap-8 md:w-fit md:items-center  md:justify-center xl:flex-col">
+                  <p className="text-[20px] text-black md:text-[30px]">
+                    Playlist 1
+                  </p>
+                  <p className=" text-[20px] text-black md:text-[30px]">
+                    Playlist 2
+                  </p>
+                  <p className="hidden text-[20px] text-black md:block md:text-[30px]">
                     Playlist 3
                   </p>
                 </div>
