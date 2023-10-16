@@ -7,7 +7,7 @@ export async function GoogleOAuthAction() {
       .collection("users")
       .authWithOAuth2({ provider: "google" });
 
-    FormattedAuthCookie(authData.token);
+    FormattedAuthCookie(pb.authStore.exportToCookie());
     return {
       status: 200,
     };
@@ -23,7 +23,7 @@ export async function GithubOAuthAction() {
       .collection("users")
       .authWithOAuth2({ provider: "github" });
 
-    FormattedAuthCookie(authData.token);
+    FormattedAuthCookie(pb.authStore.exportToCookie());
     return {
       status: 200,
     };

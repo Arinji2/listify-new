@@ -29,8 +29,8 @@ export default function Form() {
   useToast({
     message: state.message,
     type: state.type,
-    successRoute: "/verify",
-    successMessage: "Successfully Registered",
+    //  successRoute: "/verify",
+    //  successMessage: "Successfully Registered",
   });
   return (
     <>
